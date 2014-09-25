@@ -56,7 +56,7 @@ sudo rm -r -f "/CannyOS/build/cannyos-application-ubuntu-gtk3-gedit/*"
 sudo docker stop cannyos-application-ubuntu-gtk3-gedit
 
 # Launch built base container image
-sudo docker run -i -t --rm \
+sudo docker run -i -t -d \
  --privileged=true --lxc-conf="native.cgroup.devices.allow = c 10:229 rwm" \
  --volume "/CannyOS/build/cannyos-application-ubuntu-gtk3-gedit":"/CannyOS/Host" \
  --name "cannyos-application-ubuntu-gtk3-gedit" \
